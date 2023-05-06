@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\prave\\Desktop\\BevportRelease\\BevPortLive\\BevPortRevolution\\BevPortRevolution.csproj",
+      "projectUniqueName": "C:\\Users\\prave\\Desktop\\BevportRelease\\BevPortLive\\BevPortRevolution.csproj",
       "projectName": "BevPortRevolution",
-      "projectPath": "C:\\Users\\prave\\Desktop\\BevportRelease\\BevPortLive\\BevPortRevolution\\BevPortRevolution.csproj",
+      "projectPath": "C:\\Users\\prave\\Desktop\\BevportRelease\\BevPortLive\\BevPortRevolution.csproj",
       "packagesPath": "C:\\Users\\prave\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\prave\\Desktop\\BevportRelease\\BevPortLive\\BevPortRevolution\\obj\\",
+      "outputPath": "C:\\Users\\prave\\Desktop\\BevportRelease\\BevPortLive\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\prave\\AppData\\Roaming\\NuGet\\NuGet.Config",

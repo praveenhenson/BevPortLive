@@ -11463,6 +11463,7 @@ Ashutosh*/
     .contact-form-area .form-group label {
         font-weight: normal;
         color: #030C26;
+        margin-top: 25px;
     }
 
     .contact-form-area .form-control {
@@ -11486,8 +11487,8 @@ Ashutosh*/
 .content-para {
     color: #696687;
     font-family: "Rubik", Sans-serif;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 12px;
+    font-weight: 100;
     line-height: 1.5em;
 }
 
@@ -11563,7 +11564,7 @@ Ashutosh*/
 }
 
     .form-btns .btn {
-        width: 330px;
+        width: 200px;
         height: 50px;
         background: #2f98d6;
         color: #fff;
