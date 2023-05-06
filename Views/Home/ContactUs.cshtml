@@ -1,0 +1,134 @@
+﻿@model BevPort.Models.ContactUs
+@{
+    ViewData["Title"] = "ContactUs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}   <!--End Header Top Menu-->
+<div class="site-wrapper">
+    <div class="main-wrapper">
+        <!--Header Top Menu-->
+        <div class="main-naivgation">
+
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            @*</nav>*@
+        </div>
+        <!--End Header Top Menu-->
+        <section class="inner-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="banner-main-heading">
+                            <h1>Contact Us</h1>
+                            <p>Drop us a line. We’ll see you at happy hour.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main-content-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="contact-information">
+                            <h5 class="sub-heading">Get in touch</h5>
+                            <h2 class="inner-main-heading-content">Contact Us</h2>
+                            <p>Let us know what Brewing. Drop a note.</p>
+                            @*<h3>Phone:</h3>*@
+                            <p></p>
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@bevport.com">info@bevport.com</a></p>
+                            <h3>Address</h3>
+                            <p>
+                                Florida Warehouse<br />
+                                Tampa, FL
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="contact-form-area">
+                            <h2 class="inner-main-heading-content">Drop Us a Line</h2>
+                            <p class="content-para">Please drop in your details and a short message of what you are looking for and we will contact you to take it further.</p>
+                            @Html.ValidationSummary(true)
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="FIRSTNAME">First Name <span class="red-tick">*</span></label>
+                                        <input asp-for="FIRSTNAME" type="text" class="form-control" placeholder="" name="FIRSTNAME" oninput="ValidateFName()" onkeypress="ValidateFName()">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="LASTNAME">Last Name <span class="red-tick">*</span></label>
+                                        <input asp-for="LASTNAME" type="text" class="form-control" placeholder="" name="LASTNAME" oninput="ValidateLName()" onkeypress="ValidateLName()">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="EMAILID">Email <span class="red-tick">*</span></label>
+                                        <input asp-for="EMAILID" type="text" class="form-control" name="EMAILID" placeholder="" oninput="ValidateEmail()" onkeypress="ValidateEmail()">
+                                    </div>
+
+
+
+                                </div>
+                                 <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="PHONENUMBER">Mobile Number <span class="red-tick">*</span></label>
+                                        <input asp-for="PHONENUMBER" id="PHONENUMBER" type="text" class="phoneNumber form-control" name="PHONENUMBER" placeholder="" oninput="RemoveMessagePhone()" onchange="ValidatePhoneNo()" name="PHONENUMBER" onkeyup="ValidatePhoneNo()" required="">
+                                    </div>
+                                </div>
+                                                          </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="TITLE">Title <span class="red-tick">*</span></label>
+                                        <input asp-for="TITLE" type="text" class="form-control" name="TITLE" placeholder="" oninput="ValidateTitle()" onkeypress="ValidateTitle()">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="COMPANYNAME">Company Name <span class="red-tick">*</span></label>
+                                        <input asp-for="COMPANYNAME" type="text" class="form-control" name="COMPANYNAME" placeholder="" oninput="ValidateCompanyName()" onkeypress="ValidateCompanyName()">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="email">What can we do for you?</label>
+                                        <span class="red-tick">*</span>
+                                        <textarea for="Content" id="Content" name="Content" rows="3" class="form-control" oninput="ValidateContent()" onkeypress="ValidateContent()" required=""></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-btns">
+                                        <button id="ContactUs" name="save" class="btn btn-default" onclick="SaveContactUs();">Submit</button>
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+           
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    $(document).keypress(function (event) {
+        debugger;
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if (keycode == '13') {
+            SaveContactUs();
+        }
+    });
+</script>
+<script src="~/js/pages/contactus.js"></script>
