@@ -88,6 +88,9 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+body video {
+        display: block !important;
+    }
 .heade-logo {
   margin: 0 0 35px;
 }
@@ -11334,9 +11337,7 @@ img.bg-video {
     background-size: cover;
   }
 
-  body video {
-    display: none;
-  }
+
 }
 .masthead {
   position: relative;
