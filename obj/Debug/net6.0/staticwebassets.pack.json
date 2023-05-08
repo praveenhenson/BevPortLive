@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\EmailTemplates\\ContactTemplate.html"
     },
     {
+      "Id": "C:\\Users\\prave\\Desktop\\BevportRelease\\BevPortLive\\wwwroot\\EmailTemplates\\ContactTemplateAdmin.html",
+      "PackagePath": "staticwebassets\\EmailTemplates\\ContactTemplateAdmin.html"
+    },
+    {
       "Id": "C:\\Users\\prave\\Desktop\\BevportRelease\\BevPortLive\\wwwroot\\assets\\favicon.ico",
       "PackagePath": "staticwebassets\\assets\\favicon.ico"
     },

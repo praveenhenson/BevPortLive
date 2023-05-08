@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MOPJYB2wG7+Js6dI5HU2EH/PlFKJSFYI3dNldzCjHDk=",
+  "Hash": "JbN/K1JTUu16S51w11gFlceJSKvFQSjc7r+Gda7/AAk=",
   "Source": "BevPortRevolution",
   "BasePath": "_content/BevPortRevolution",
   "Mode": "Default",
@@ -185,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\EmailTemplates\\ContactTemplate.html"
+    },
+    {
+      "Identity": "C:\\Users\\prave\\Desktop\\BevportRelease\\BevPortLive\\wwwroot\\EmailTemplates\\ContactTemplateAdmin.html",
+      "SourceId": "BevPortRevolution",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\prave\\Desktop\\BevportRelease\\BevPortLive\\wwwroot\\",
+      "BasePath": "_content/BevPortRevolution",
+      "RelativePath": "EmailTemplates/ContactTemplateAdmin.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\EmailTemplates\\ContactTemplateAdmin.html"
     },
     {
       "Identity": "C:\\Users\\prave\\Desktop\\BevportRelease\\BevPortLive\\wwwroot\\js\\ContactUs.js",

@@ -57,6 +57,62 @@ namespace BevPortRevolution.Controllers
                         str.Close();
                         Content = Content.Replace("#firstname", contact.FIRSTNAME);
                         var result1 = new EmailController().SendEmail(contact.EMAILID!, "BevPort Contact", Content);
+                        Adminmail(contact);
+                    }
+                    else
+                    {
+                        objResp.ResponseCode = "fail";
+                        objResp.ResponseMessage = "Contact us fail.";
+                        return Json(objResp);
+                    }
+                }
+                objResp.ResponseCode = "success";
+                objResp.ResponseMessage = "Thank you for contacting us, we will connect you soon!";
+                return Json(objResp);
+            }
+            catch (Exception ex)
+            {
+                objResp.ResponseMessage = "Some Error";
+                return Json(objResp);
+            }
+        }
+
+        public async Task<IActionResult> Adminmail(ContactUs contact)
+        {
+            ResponseModel objResp = new ResponseModel();
+            string webRootPath = _webHostEnvironment.WebRootPath;
+            string contentRootPath = _webHostEnvironment.ContentRootPath;
+
+
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    client.BaseAddress = new Uri("https://bevportfunctions20230303194850.azurewebsites.net/");
+                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                    HttpResponseMessage response = new HttpResponseMessage();
+                    BaseURL BaseURL = new BaseURL();
+                    response = await client.PostAsJsonAsync(BaseURL.CreateContactUs, contact).ConfigureAwait(false);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string result = response.Content.ReadAsStringAsync().Result;
+
+                        string body = string.Empty;
+                        string FilePath = webRootPath + @"\EmailTemplates\ContactTemplateAdmin.html";
+                        StreamReader str = new StreamReader(FilePath);
+                        string Content = str.ReadToEnd();
+                        str.Close();
+                        Content = Content.Replace("#firstname", contact.FIRSTNAME);
+                        Content = Content.Replace("#lastname", contact.LASTNAME);
+                        Content = Content.Replace("#email", contact.EMAILID);
+                        Content = Content.Replace("#mobile", contact.PHONENUMBER);
+                        Content = Content.Replace("#title", contact.TITLE);
+                        Content = Content.Replace("#company", contact.COMPANYNAME);
+                        Content = Content.Replace("#question", contact.Content);
+                        //(contact.EMAILID!, "BevPort Contact", Content);
+
+                        var result1 = new EmailController().SendEmail("praveen.sharma@hensongroup.com", "BevPort Contact", Content);
                     }
                     else
                     {
