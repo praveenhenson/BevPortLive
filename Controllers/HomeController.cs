@@ -112,7 +112,7 @@ namespace BevPortRevolution.Controllers
                         Content = Content.Replace("#question", contact.Content);
                         //(contact.EMAILID!, "BevPort Contact", Content);
 
-                        var result1 = new EmailController().SendEmail("praveen.sharma@hensongroup.com", "BevPort Contact", Content);
+                        var result1 = new EmailController().SendEmail("admin@bevport.com", "BevPort Contact", Content);
                     }
                     else
                     {
